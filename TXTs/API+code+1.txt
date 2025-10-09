@@ -1,0 +1,42 @@
+// Set your API key
+const API_KEY = "XXXXXXXXXX";
+
+// Define the base URL for the API request
+const GPT_URL = "https://api.openai.com/v1/chat/completions";
+
+function GPT(Prompt) {
+
+  // Set up headers for API authorization and content type
+  const headers = {
+    "Content-Type": "application/json",
+    "Authorization": `Bearer ${API_KEY}`
+  };
+
+  // Configure request options including headers, method, and payload
+  const options = {
+    headers,
+    method: "GET",
+    muteHttpExceptions: true,
+    payload: JSON.stringify({
+      "model": "gpt-3.5-turbo",  // Specify the model to use (here I chose GPT 3.5 turbo)
+      "messages": [{     // Prepare messages for interaction context
+        "role": "system",
+        "content": "" //You can put here a custom instruction (style, tone, role, etc.)
+      },
+      {
+        "role": "user",
+        "content": Prompt 
+      }],
+      "temperature": 0.6  // Set creativity level of the response
+    })
+  }
+
+  // Fetch the response from the API and parse the JSON
+  const response = JSON.parse(UrlFetchApp.fetch(GPT_URL, options));
+  
+  // Log the content of the first message returned
+  console.log(response.choices[0].message.content);
+  
+  // Return the content of the first message
+  return response.choices[0].message.content
+}
