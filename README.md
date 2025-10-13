@@ -1,6 +1,6 @@
 # Prompts para uso general
 
-## Normales
+## Prompts para uso Normal
 
 - Consultar por un tema en especifico
 
@@ -13,7 +13,9 @@ FORMATO DE SALIDA: Dame dos párrafos explicándolo y la formula matemática
 LIMITE: Cuando me des tres ejemplos
 ```
 
-## Creación de proyectos
+## Prompts para trabajo fullstack
+
+### Creación de proyectos
 
 - Creación de un sistema de autenticación completo
 
@@ -28,7 +30,9 @@ Crea un sistema de autenticación completo con:
 - Test con Jest
 ```
 
-- Tareas de Mantenimiento
+### Tareas de Mantenimiento
+
+- Revision de un repositorio para encontrar mejoras o errores
 
 ```bash
 #Tarea 1
@@ -40,7 +44,23 @@ Una vez revisado el contenido, indícame que mejoras puedo hacer al código y lo
 
 #Tarea 2
 entra en la ruta vendors\application\functions y revisa el contenido, una vez hecho indícame que mejoras puedo hacer al código y los errores que puedas encontrar
-
-
 ```
 
+### Documentar proyectos
+
+- Crear la documentación de un proyecto para obtener el listado de tareas e historias de usuario
+
+```bash
+#Paso 1
+Dame la documentación de requisitos(casos de usos, historias de usuarios, especificaciones funcionales y no funcionales) de una api para una web que es una aplicación administrador de gastos (ingresos, egresos, registros de cuentas, etc)
+
+#Paso 2
+dame la documentacion de diseño para este proyecto
+
+#Paso 3
+Ahora damela usando mermaid, ERD (entidad relacion)
+
+#Paso 4
+Darle el formato para un readme.md
+
+```
